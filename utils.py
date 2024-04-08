@@ -1190,7 +1190,7 @@ def test_graph_instance(subsets, universe, solutions, m_type = 'sage', cost_type
                 current_objective = np.sum([sub_costs[int(s)] for s in sols[0]])
             
             
-        perc = max(0, perc - dec_size)
+        perc = max(5, perc - dec_size)
         sub_nodes = list(out_np[:, 0][np.where(out_np[:, 1] > np.percentile(out_np[:, 1], perc))[0]])
     
         if perc == 0:
