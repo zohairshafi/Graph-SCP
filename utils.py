@@ -2190,8 +2190,9 @@ def train_graph_instance_unsup(subsets, universe, solutions, m_type = 'sage', co
     
     # Solution sets
     # Build subsets from indices
+    current_sol = []
     for sol in solutions: 
-        current_sol = [str(subsets[int(s)]) for s in sol]
+        current_sol += [str(subsets[int(s)]) for s in sol]
         
     # Map subsets to nodes
     for sol in current_sol:
